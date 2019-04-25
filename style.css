@@ -1,0 +1,125 @@
+::selection {
+	background: #1C8FE1; /* Safari */
+	}
+::-moz-selection {
+	background: #1C8FE1; /* Firefox */
+}
+
+body {
+	background-color: #ddd;
+	color: black;
+	font-family: Courier New, Trebuchet MS, Comic Sans MS, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+h1 {
+	font-size: 70px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	cursor: default;
+}
+
+#container {
+    background-color: white;
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+	border-color: red;
+	border-width: 20px;
+	border-radius: 15px;
+	/*background-color: red;*/
+    padding: 25px 30px;
+    margin: 25px auto;
+    box-shadow: 0px 0px 10px #999;
+}
+#header {
+	height: 120px;
+	text-align: left;
+	/*background-color: green;*/
+}
+#menu {
+	height: 50px;
+	/*background-color: grey;*/
+}
+#menu ul {
+	padding: 10px 10px;
+    padding-left: 0px;
+	color: #999;
+}
+
+#menu li {
+	padding: 10px 10px;
+    margin-left: 0px;
+	color: #999;
+	float: left;
+    list-style:none;
+    text-decoration: underline;
+}
+
+#menu li:hover {
+	color: black;
+}
+
+h3 {
+	text-align: left;
+}
+
+p {
+    text-indent: 2em;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.mainText {
+}
+
+.mainText a {
+	color: #1C8FE1;
+	text-decoration: underline;
+}
+
+.mainText a:hover {
+	color: #E1899F;
+}
+
+.mainText p {
+	text-align: justify;
+}
+
+.mainText li {
+	text-align: left;
+	line-height: 150%;
+}
+
+/*.mainText li:before {
+	content: " - ";
+}*/
+
+.poster {
+	width: 1000px;
+	height: 200px;
+}
+.poster-img {
+	float: left;
+    width: 300px;
+    height: 200px;
+    display: flex;
+	align-items: center;
+}
+
+.poster-img img {
+	margin: 0 auto
+}
+
+.poster-text {
+	width:700px;
+	height: 200px;
+	float: right;
+	text-align: left;
+}
