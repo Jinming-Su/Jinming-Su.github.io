@@ -1,3 +1,3 @@
-# Jinming-Su.github.io
+# Homepage for Jinming Su
 
-Personal Homepage for Jinming Su.
+The website address is http://sjming.net/.
