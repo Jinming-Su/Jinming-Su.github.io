@@ -103,12 +103,13 @@ a {
 
 .poster {
 	width: 1000px;
-	height: 200px;
+	height: 180px;
+	border: 0.5px dashed #aaa
 }
 .poster-img {
 	float: left;
     width: 300px;
-    height: 200px;
+    height: 180px;
     display: flex;
 	align-items: center;
 }
@@ -119,7 +120,7 @@ a {
 
 .poster-text {
 	width:700px;
-	height: 200px;
+	height: 180px;
 	float: right;
 	text-align: left;
 }
