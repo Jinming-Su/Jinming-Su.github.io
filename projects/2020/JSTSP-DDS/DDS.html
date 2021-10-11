@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>DDS (IEEE JSTSP)</title>
+
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" href="../../../styles/layout.css" type="text/css">
+<link rel="stylesheet" href="../../../styles/navi.css" type="text/css">
+
+<style type="text/css">
+html,body{
+	height:100%;
+}
+#main {
+	position: relative;
+	min-height:100%;
+	_height:100%;
+}
+#footer_new {
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+	width: 980px;
+	background:rgb(0,95,175);
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<div id="contents_for_indexpage">
+    <div class="" style="width:100%; overflow:auto;">
+        <div id="title" style="margin-top:20px;" align="center">
+            <h1 style="color:#005FAF"><b>Distortion-adaptive Salient Object Detection in 360&deg Omnidirectional Images</b></h1>
+            <h3 style="color:#005FAF"><b>Jia Li<sup>1,3</sup> &nbsp;&nbsp; Jinming Su<sup>1</sup> &nbsp;&nbsp; Changqun Xia<sup>3,*</sup> &nbsp;&nbsp; Yonghong Tian<sup>2,3,*</sup></b></h3>
+            <sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University </br>
+	    <sup>2</sup>National Engineering Laboratory for Video Technology, School of EE&CS, Peking University </br>
+	    <sup>3</sup>Peng Cheng Laboratory, Shenzhen, China </br>
+            <h3 style="color:#005FAF"><b>Published in IEEE JSTSP</b></h3>
+        </div>
+
+        <div id="context" style="overflow:auto;padding-top:1px; padding-bottom:1px;padding-left:10px; padding-right:10px; text-align:justify">
+		<h2 style="color:#005FAF"><b>Abstract</b></h2>
+		<hr color="#005FAF">
+    		<p style="line-height:2.0; margin-top:0px;">Image-based salient object detection (SOD) has been extensively explored in the past decades. However, SOD on 360&deg omnidirectional images is less studied owing to the lack of datasets with pixel-level annotations. Toward this end, this paper
+proposes a 360&deg image-based SOD dataset that contains 500 high-resolution equirectangular images. We collect the representative equirectangular images from five mainstream 360&deg video datasets
+and manually annotate all objects and regions over these images with precise masks with a free-viewpoint way. To the best of our knowledge, it is the first public available dataset for salient object detection on 360&deg scenes. By observing this dataset, we find that distortion from projection, large-scale complex scene and small salient objects are the most prominent characteristics.
+Inspired by the founding, this paper proposes a baseline model for SOD on equirectangular images. In the proposed approach, we construct a distortion-adaptive module to deal with the distortion
+caused by the equirectangular projection. In addition, a multi-scale contextual integration block is introduced to perceive and distinguish the rich scenes and objects in omnidirectional scenes. The whole network is organized in a progressively manner with deep supervision. Experimental results show the proposed baseline approach outperforms the top-performanced state-of-the-art methods on 360&deg SOD dataset. Moreover, benchmarking results of the proposed baseline approach and other methods on 360&deg SOD dataset show the proposed dataset is very challenging, which also validate the usefulness of the proposed dataset and approach to boost the development of SOD on 360&deg omnidirectional scenes.</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Dataset (360-SOD)</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./example.png" width="97%" alt="Example"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">Representative examples of 360-SOD. Images and ground truth are shown as equirectangular images.</p>
+
+		
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Method</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./framework.png" width="97%" alt="Framework"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">The framework of our baseline model. The equirectangular image is processed by a distortion-adaptive module, and the output is transferred to ResNet-50 to extract features in different levels. The highest-level features are dealt with by a multi-scale context integration module to integrate information. Moreover, the coarser-level saliency features are concatenated into the adjacent finer-level features to get finer saliency maps and the whole network is organized in a progressive form.</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Quantitative Evaluation</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./Quantitative_Evaluation.png" width="97%" alt="Quantitative Evaluation"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">Performance of the state-of-the-arts and the proposed method after being fine-tuned on 360-SOD dataset. Note that ''R3Net-w/oCRF'' means R3Net without Dense CRF and "-" means the results cannot be obtained. The best three results are in red, green and blue fonts. </p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Qualitative Evaluation</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./Qualitative_Evaluation.png" width="97%" alt="Qualitative Evaluation"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">Representative examples of the state-of-the-art algorithms after being fine-tuned on 360-SOD. GT means ground-truth masks of salient objects.</p>
+	
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Citation</b></h2>
+		<hr color="#005FAF">
+		<p style="line-height:2.0; margin-top:0px;">Jia Li, Jinming Su, Changqun Xia and Yonghong Tian. Distortion-adaptive Salient Object Detection in 360&deg Omnidirectional Images. 
+In IEEE JSTSP.</p>
+		<p style="line-height:2.0; margin-top:0px;">paper: <a style="color: red;text-decoration:none;" href="https://ieeexplore.ieee.org/document/8926489">[PDF]</a> </p>
+
+
+
+		<p style="line-height:2.0; margin-top:0px;">Google Drive: <br/>
+<a style="color: red;text-decoration:none;" href="https://drive.google.com/drive/folders/1ZGRHohv9bdXKxs1z_5Wri0h__qRFIqKC?usp=sharing">[Project Resources]</a><br/>
+		
+		
+		<p style="line-height:2.0; margin-top:0px;">Baidu Drive: <br/>
+<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1G0zBkcJi8q58Qr8LB1R3Lw">[Dataset. 89MB]</a> code: gcul<br/>
+<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1xjItHiAHWBy5L5hRj97s8g">[Results on 360-SOD testing set. 1MB]</a> code: fpbf <br/>
+<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/14RS4Mhq_kG9gSu6yE-NMig">[Code & Model. 115MB]</a> code: u2ct</p>
+
+
+		<p style="line-height:2.0; margin-top:0px;">BibTex: </p>
+
+		<pre style="text-align: left">@article{li2019distortion,
+  title={Distortion-adaptive Salient Object Detection in 360&deg Omnidirectional Images},
+  author={Li, Jia and Su, Jinming and Xia, Changqun and Tian, Yonghong},
+  journal={IEEE Journal of Selected Topics in Signal Processing (JSTSP)},
+  publisher={IEEE}，
+  year={2020},
+volume={14},
+number={1},
+pages={38-48}
+}
+		</pre>
+        </div>
+     
+    </div>
+
+</div>
+
+</body></html>
+
