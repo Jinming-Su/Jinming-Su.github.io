@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>BANet (ICCV 2019)</title>
+
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" href="../../styles/layout.css" type="text/css">
+<link rel="stylesheet" href="../../styles/navi.css" type="text/css">
+
+<style type="text/css">
+html,body{
+	height:100%;
+}
+#main {
+	position: relative;
+	min-height:100%;
+	_height:100%;
+}
+#footer_new {
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+	width: 980px;
+	background:rgb(0,95,175);
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<div id="contents_for_indexpage">
+    <div class="" style="width:100%; overflow:auto;">
+        <div id="title" style="margin-top:20px;" align="center">
+            <h1 style="color:#005FAF"><b>Selectivity or Invariance: Boundary-aware Salient Object Detection</b></h1>
+            <h3 style="color:#005FAF"><b>Jinming Su<sup>1,3</sup> &nbsp;&nbsp; Jia Li<sup>1,3,*</sup> &nbsp;&nbsp; Yu Zhang<sup>1</sup> &nbsp;&nbsp; Changqun Xia<sup>3</sup> &nbsp;&nbsp; Yonghong Tian<sup>2,3,*</sup></b></h3>
+            <sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University </br>
+	    <sup>2</sup>National Engineering Laboratory for Video Technology, School of EE&CS, Peking University </br>
+	    <sup>3</sup>Peng Cheng Laboratory, Shenzhen, China </br>
+            <h3 style="color:#005FAF"><b>Published in ICCV, 2019</b></h3>
+        </div>
+
+        <div id="context" style="overflow:auto;padding-top:1px; padding-bottom:1px;padding-left:10px; padding-right:10px; text-align:justify">
+		<h2 style="color:#005FAF"><b>Abstract</b></h2>
+		<hr color="#005FAF">
+    		<p style="line-height:2.0; margin-top:0px;">Typically, a salient object detection (SOD) model faces opposite requirements in processing object interiors and boundaries. The features of interiors should be invariant to strong appearance change so as to pop-out the salient object as a whole, while the features of boundaries should be selective to slight appearance change to distinguish
+salient objects and background. To address this selectivity-invariance dilemma, we propose a novel boundary-aware network with successive dilation for image-based SOD. In this network, the feature selectivity at boundaries is enhanced by incorporating a boundary localization stream, while the feature invariance at interiors is guaranteed with a complex interior perception stream. Moreover, a transition compensation stream is adopted to amend the probable failures in transitional regions between interiors and boundaries. In particular, an integrated successive dilation module is proposed to enhance the feature invariance at interiors and transitional regions. Extensive experiments on six datasets show that the proposed approach outperforms 16 state-of-the-art methods.</p>
+		
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Method</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./framework.png" width="97%" alt="Framework"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">The framework of our approach. We first use ResNet-50 to extract common features for three streams. The boundary localization stream uses multi-level features and a simple network to detect salient boundaries with high selectivity, while the interior perception stream uses single-level features and a complex network to guarantee invariance in salient interiors. Their output features are used to form two confidence maps of selectivity and invariance, based on which a transition compensation stream is adopted to amend the probable failures that are likely to occur in the transition regions between boundaries and interiors. These three streams are concatenated to form a boundary-aware feature mosaic map so that the salient object can pop-out as a whole with clear boundaries.</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Quantitative Evaluation</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./Quantitative_Evaluation.png" width="97%" alt="Quantitative Evaluation"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">Performance of 16 state-of-the-arts and the proposed method on six benchmark datasets. Smaller MAE, larger Fw&beta; and F&beta; correspond to better performance. The best results of different backbones are in blue and red fonts. "-" means the results cannot be obtained and "&dagger;" means the results are post-processed by dense conditional random field (CRF). Note that the backbone of PAGRN is VGG-19 and the one of R3Net is ResNeXt-101. MK: MSRA10K, DUTS: DUTS-TR, MB: MSRA-B.</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Qualitative Evaluation</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./Qualitative_Evaluation.png" width="97%" alt="Qualitative Evaluation"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">Qualitative comparisons of the state-of-the-art algorithms and our approach. GT means ground-truth masks of salient objects. The images are selected from six datasets for testing.</p>
+	
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Citation</b></h2>
+		<hr color="#005FAF">
+		<p style="line-height:2.0; margin-top:0px;">Jinming Su, Jia Li, Yu Zhang, Changqun Xia, Yonghong Tian. Selectivity or Invariance: Boundary-aware Salient Object Detection.
+In ICCV, 2019.</p>
+		<p style="line-height:2.0; margin-top:0px;"><b>Paper:</b> <a style="color: red;text-decoration:none;" href="./2019_ICCV_Selectivity or Invariance: Boundary-aware Salient Object Detection.pdf">[PDF]</a> </p>
+		<p style="line-height:2.0; margin-top:0px;"><b>Resources: </b></p>
+		Results on ECSSD, DUT-OMRON, PASCAL-S, HKU-IS, DUTS-TE, XPIE:
+		<br/>
+		<a style="color: red;text-decoration:none;" href="./Results.tar.gz">[Results of ResNet. 317MB]</a>
+   		<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1Q2zWprf4ba2-qqwz6CSReQ">[Results of VGG. 310MB]</a>  
+   		<a style="color: red;text-decoration:none;" href="./Code & model.tar.gz">[Code & model. 203MB]</a></p>
+		Results on SOD:
+		<br/>
+      	<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1mFOnaq2TL1aeVfRi5GwxFA">[Results.]</a>  
+		<p style="line-height:2.0; margin-top:0px;"><b>BibTex: </b></p>
+		<pre style="text-align: left">@inproceedings{su2019banet,
+  title={Selectivity or Invariance: Boundary-aware Salient Object Detection},
+  author={Su, Jinming and Li, Jia and Zhang, Yu and Xia, Changqun and Tian, Yonghong.},
+  booktitle={ICCV},
+  year={2019}
+}
+		</pre>
+        </div>
+     
+    </div>
+
+</div>
+
+</body></html>
+
