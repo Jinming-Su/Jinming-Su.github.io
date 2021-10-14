@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>TSOD (IEEE ICME)</title>
+
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" href="../../../styles/layout.css" type="text/css">
+<link rel="stylesheet" href="../../../styles/navi.css" type="text/css">
+
+<style type="text/css">
+html,body{
+	height:100%;
+}
+#main {
+	position: relative;
+	min-height:100%;
+	_height:100%;
+}
+#footer_new {
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+	width: 980px;
+	background:rgb(0,95,175);
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<div id="contents_for_indexpage">
+    <div class="" style="width:100%; overflow:auto;">
+        <div id="title" style="margin-top:20px;" align="center">
+            <h1 style="color:#005FAF"><b>Exploring Driving-Aware Salient Object Detection via Knowledge Transfer</b></h1>
+            <h3 style="color:#005FAF"><b>Jinming Su<sup>1,3</sup> &nbsp;&nbsp; Changqun Xia<sup>2,*</sup> &nbsp;&nbsp; Jia Li<sup>1,2,*</sup></b></h3>
+            <sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University </br>
+	    	<sup>2</sup>Peng Cheng Laboratory, Shenzhen, China</br>
+	    	<sup>3</sup>Meituan</br>
+            <h3 style="color:#005FAF"><b>Published in IEEE ICME</b></h3>
+        </div>
+
+        <div id="context" style="overflow:auto;padding-top:1px; padding-bottom:1px;padding-left:10px; padding-right:10px; text-align:justify">
+		<h2 style="color:#005FAF"><b>Abstract</b></h2>
+		<hr color="#005FAF">
+    		<p style="line-height:2.0; margin-top:0px;">
+				Recently, general salient object detection (SOD) has made great progress with the rapid development of deep neural networks.
+				However, task-aware SOD has hardly been studied due to the lack of task-specific datasets.
+				In this paper, we construct a driving task-oriented dataset where pixel-level masks of salient objects have been annotated.
+				Comparing with general SOD datasets, we find that the cross-domain knowledge difference and task-specific scene gap are two main challenges to focus the salient objects when driving.
+				Inspired by these findings, we proposed a baseline model for the driving task-aware SOD via a knowledge transfer convolutional neural network.
+				In this network, we construct an attention-based knowledge transfer module to make up the knowledge difference.
+				In addition, an efficient boundary-aware feature decoding module is introduced to perform fine feature decoding for objects in the complex task-specific scenes.
+				The whole network integrates the knowledge transfer and feature decoding modules in a progressive manner.
+				Experiments show that the proposed dataset is very challenging, and the proposed method outperforms 12 state-of-the-art methods on the dataset, which facilitates the development of task-aware SOD.
+			</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Dataset (CitySaliency)</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./example.png" width="97%" alt="Example"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">
+			Comparisons of the conventional and task-specific SOD dataset.
+			Images and ground-truth masks of the (a) conventional dataset and (b) task-specific dataset are from DUT-OMRON and CitySaliency, respectively.
+		</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Method</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./framework.png" width="97%" alt="Framework"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">
+			The framework of the baseline. We first extract the general knowledge by common SOD methods, and then the extracted knowledge is transferred to the task-specific knowledge by an attention-based knowledge transfer module (AKT) to deal with the
+cross-domain knowledge difference.
+			After that, the task-specific knowledge is decoded by a boundary-aware feature decoding module (BFD) in a progressive manner to detect task-specific salient objects.
+		</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Quantitative Evaluation</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./Quantitative_Evaluation.png" width="97%" alt="Quantitative Evaluation"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">
+			Performance of 13 state-of-the-art models before and after fine-tuning on CitySaliency.
+			Note that ''R3Net'' and ''DSS'' are armed with Dense CRF. The best three results are in red, green and blue fonts.
+		</p>
+
+		<div style="height: 20px"></div>
+		<h2 style="color:#005FAF"><b>Qualitative Evaluation</b></h2>
+		<hr color="#005FAF">
+		<div align="center"><img src="./Qualitative_Evaluation.png" width="97%" alt="Qualitative Evaluation"></div>
+		<p style="line-height:2.0; text-align: center; margin-top:0px;">
+			Representative examples of the state-of-the-art methods and our approach after being fine-tuned.
+		</p>
+	
+		<div style="height: 20px"></div>
+
+		<h2 style="color:#005FAF"><b>Resources</b></h2>
+		<hr color="#005FAF">
+			<p style="line-height:2.0; margin-top:0px;">
+			<a style="color: red;text-decoration:none;" href="https://github.com/Jinming-Su/TSOD">[Github]</a><br/>
+			<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1p7rIONaRzKG8CDuyG6Fdqw">[Dataset]</a> code: 3j5r<br/>
+			<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1dEvOYuw9pcZUNUYhd8Zpnw">[Results on CitySaliency testing set]</a> code: 495k <br/>
+			<a style="color: red;text-decoration:none;" href="https://pan.baidu.com/s/1N49N0P5tu7kWwes1rXuNvw">[Model]</a> code: m13w
+			</p>
+
+
+		<h2 style="color:#005FAF"><b>Citation</b></h2>
+		<hr color="#005FAF">
+		<p style="line-height:2.0; margin-top:0px;">Jinming Su, Changqun Xia and Jia Li. Exploring Driving-Aware Salient Object Detection via Knowledge Transfer.
+In ICME, 2021.</p>
+
+		<p style="line-height:2.0; margin-top:0px;"><b>BibTex: </b></p>
+		<pre style="text-align: left">@inproceedings{su2021exploring,
+  title={Exploring Driving-Aware Salient Object Detection via Knowledge Transfer},
+  author={Su, Jinming and Xia, Changqun and Li, Jia},
+  booktitle={2021 IEEE International Conference on Multimedia and Expo (ICME)},
+  pages={1--6},
+  year={2021},
+  organization={IEEE}
+}
+		</pre>
+        </div>
+     
+    </div>
+
+</div>
+
+</body></html>
+
