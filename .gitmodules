@@ -1,0 +1,3 @@
+[submodule "widget/ai_conference"]
+	path = widget/ai_conference
+	url = git@github.com:Jinming-Su/ai_conference.git
