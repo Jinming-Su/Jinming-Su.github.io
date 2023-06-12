@@ -41,6 +41,7 @@ h1 {
 #menu {
 	height: 50px;
 	/*background-color: grey;*/
+	text-indent: 2em;
 }
 #menu ul {
 	padding: 10px 10px;
@@ -49,7 +50,7 @@ h1 {
 }
 
 #menu li {
-	padding: 10px 10px;
+	padding: 10px 0px;
     margin-left: 0px;
 	color: #999;
 	float: left;
